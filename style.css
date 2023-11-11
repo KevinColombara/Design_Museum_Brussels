@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
 @font-face {
   font-family: DMB;
   src: url("fonts/DMB-bold.ttf");
@@ -6,102 +8,120 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "DMB";
+  /* cursor: url("images/logo-DMB-white.svg"), auto; */
 }
+
 body {
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url("https://cobal.co.uk/wp-content/uploads/2020/02/the-Design-Museum_Exterior_Branding_Illuminated-3.2-scaled.jpg");
-  background-position: center;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url("images/index.png");
   background-size: cover;
-  position: relative;
+  background-attachment: fixed;
+  font-family: "Lato", sans-serif;
 }
 
-.header {
-  min-height: 100vh;
-  width: 100%;
-}
-
-nav {
+header {
+  background-color: #333;
+  /* padding: 5px; */
+  color: #fff;
   display: flex;
-  padding: 2% 6%;
-  justify-content: space-between;
   align-items: center;
-  /* background-color: rgb(70, 70, 99); */
+  justify-content: space-between;
+  background: hsl(0 0% 0% / 0.4);
+  backdrop-filter: blur(0.3rem);
 }
 
-nav img {
-  width: 200px;
+.logo {
+  width: 5em;
+  margin-left: 1em;
 }
 
-.nav-links {
-  flex: 1;
-  text-align: right;
+.navbar {
+  overflow: hidden;
+  display: flex;
 }
 
-.nav-links ul li {
+.navbar > li {
   list-style: none;
-  display: inline-block;
-  padding: 8px 24px;
-  position: relative;
+  padding: 0.3em;
+  margin-inline-end: 2em;
 }
 
-.nav-links ul li a {
-  color: white;
+.navbar a {
   text-decoration: none;
-  font-size: 30px;
-  font-weight: bold;
+  color: #fff;
+  font-family: "DMB", sans-serif;
+  font-weight: 400;
+  font-size: larger;
 }
 
-.nav-links ul li::after {
+.navbar li::after {
   content: "";
   width: 0%;
-  height: 2px;
-  background: white;
+  height: 0.15em;
+  background: #fff;
   display: block;
   margin: auto;
   transition: 0.5s;
+  transform: translateY(80%);
 }
 
-.nav-links ul li:hover::after {
+.navbar li:hover::after {
   width: 100%;
 }
 
-.text-box {
-  width: 90%;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.text-box h1 {
-  font-size: 100px;
-  padding-top: 10%;
-}
-
-.about {
-  display: flex;
-}
-.about-text {
-  display: block;
+.dropdown {
   float: left;
-  width: 50%;
+  overflow: hidden;
 }
 
-.about-text p {
-  margin: 5px;
-  color: white;
-  font-size: 25px;
-  font-family: "Lato", sans-serif;
-  padding: 5%;
+.dropdown .dropbtn {
+  /* text-decoration: none; */
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: #fff;
+  font-family: "DMB", sans-serif;
+  font-weight: 400;
+  font-size: larger;
 }
 
-.about-image {
-  margin: auto;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: inherit;
+  padding: 2em 0.5em 0.5em 3em;
+  z-index: 1;
+  transform: translateX(-0.5em);
+  /* border-left: 0.2em solid; */
+  /* transition: 2.5s; */
 }
 
-.about-image img {
-  width: 600px;
+.dropdown-content li {
+  list-style-type: none;
+}
+
+.dropdown-content a {
+  float: none;
+  text-align: left;
+  display: block;
+  padding-top: 0.5em;
+  /* margin-block-end: 1em; */
+}
+
+.line {
+  display: none;
+  position: fixed;
+  transform: translate(1.5em, 1em);
+
+  width: 0.25em;
+  height: 5.5em;
+  background-color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .line {
+  display: block;
 }

@@ -1,32 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DMB - Education</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Education</title>
   </head>
-
   <body>
-    <section class="header">
+    <header>
+      <a href="index.html" class="logo"
+        ><img src="images/logo-DMB-white.svg" alt="Logo"
+      /></a>
+
       <nav>
-        <a href="./index.html"><img src="images/logo-DMB-V2.svg" /></a>
-        <div class="nav-links">
-          <ul>
-            <li><a href="./exhibition.html">EXHIBITION</a></li>
-            <li><a href="./education.html">EDUCATION</a></li>
-            <li><a href="./agenda.html">AGENDA</a></li>
-            <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="./contact.html">CONTACT</a></li>
-            <li><a href="">EN - FR</a></li>
-          </ul>
-        </div>
+        <ul class="navbar">
+          <!-- <li><a href="exhibition.html">EXHIBITION</a></li> -->
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn">EXHIBITION</button>
+              <div class="line"></div>
+              <div class="dropdown-content">
+                <ul>
+                  <li><a href="temporary.html">TEMPORARY</a></li>
+                  <li><a href="permanent.html">PERMANENT</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="agenda.html">AGENDA</a></li>
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn">ABOUT</button>
+              <div class="line"></div>
+              <div class="dropdown-content">
+                <ul>
+                  <li><a href="bmd.html">BMD</a></li>
+                  <li><a href="bitm.html">BITM</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="">EN - FR</a></li>
+        </ul>
       </nav>
-    </section>
+    </header>
   </body>
 </html>
