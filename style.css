@@ -5,10 +5,27 @@
   src: url("fonts/DMB-bold.ttf");
 }
 
+@keyframes titleSlide {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes titleDecoration {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
-  /* cursor: url("images/logo-DMB-white.svg"), auto; */
 }
 
 body {
@@ -17,6 +34,12 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+
+.exhibition {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url("images/exhibition.png");
 }
 
 header {
@@ -124,4 +147,69 @@ header {
 
 .dropdown:hover .line {
   display: block;
+}
+
+.title div {
+  position: absolute;
+  width: 33vw;
+  text-align: center;
+  width: 30vw;
+  font-size: 13vh;
+  font-family: "DMB";
+  color: #fff;
+  transform: translateX(-400%);
+}
+
+#design {
+  top: 33vh;
+  left: 20vw;
+  animation: 3s ease-out 0.3s 1 titleSlide forwards;
+}
+
+#museum {
+  top: 45vh;
+  left: 33vw;
+  animation: 3s ease-out 0.2s 1 titleSlide forwards;
+}
+
+#brussels {
+  top: 57vh;
+  right: 25vw;
+  animation: 3s ease-out 0.1s 1 titleSlide forwards;
+}
+
+.title-decoration div {
+  opacity: 0;
+  position: absolute;
+  width: 30vh;
+  height: 1vh;
+  background-color: #fff;
+  animation: 1.5s ease-out 2.5s 1 titleDecoration forwards;
+}
+
+.left-line,
+.right-line {
+  display: flex;
+  justify-content: space-between;
+  transform: rotate(-45deg);
+}
+
+.left-line {
+  left: 18vw;
+  bottom: 23vh;
+}
+
+.right-line {
+  right: 20vw;
+  top: 31vh;
+}
+
+div.circle {
+  position: relative;
+  bottom: 1vh;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
 }
