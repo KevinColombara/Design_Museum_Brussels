@@ -23,6 +23,17 @@
   }
 }
 
+@keyframes infoText {
+  0% {
+    /* width: 0vw; */
+    height: 0vh;
+  }
+  100% {
+    /* width: 15vw; */
+    height: 8vh;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,23 +45,28 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: "Lato", sans-serif;
-  overflow: hidden;
 }
 
-.exhibition {
+#temporary {
   background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
-    url("images/exhibition.png");
+    url("images/exhibition-temporary.png");
+  /* backdrop-filter: blur(0.2rem); */
+  background-position-y: -33vh;
+}
+
+#permanent {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url("images/exhibition-permanent.png");
 }
 
 header {
   background-color: #333;
-  /* padding: 5px; */
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: hsl(0 0% 0% / 0.4);
-  backdrop-filter: blur(0.3rem);
+  backdrop-filter: blur(0.4rem);
 }
 
 .logo {
@@ -98,7 +114,6 @@ header {
 }
 
 .dropdown .dropbtn {
-  /* text-decoration: none; */
   border: none;
   outline: none;
   background-color: inherit;
@@ -115,8 +130,6 @@ header {
   padding: 2em 0.5em 0.5em 3em;
   z-index: 1;
   transform: translateX(-0.5em);
-  /* border-left: 0.2em solid; */
-  /* transition: 2.5s; */
 }
 
 .dropdown-content li {
@@ -128,7 +141,6 @@ header {
   text-align: left;
   display: block;
   padding-top: 0.5em;
-  /* margin-block-end: 1em; */
 }
 
 .line {
@@ -163,19 +175,46 @@ header {
 #design {
   top: 33vh;
   left: 20vw;
-  animation: 3s ease-out 0.3s 1 titleSlide forwards;
+  animation: 2s ease-out 0.3s 1 titleSlide forwards;
 }
 
 #museum {
   top: 45vh;
   left: 33vw;
-  animation: 3s ease-out 0.2s 1 titleSlide forwards;
+  animation: 2s ease-out 0.2s 1 titleSlide forwards;
 }
 
 #brussels {
   top: 57vh;
   right: 25vw;
-  animation: 3s ease-out 0.1s 1 titleSlide forwards;
+  animation: 2s ease-out 0.1s 1 titleSlide forwards;
+}
+
+.left-text {
+  animation: infoText 1.7s ease-out 1.7s forwards;
+  overflow: hidden;
+
+  width: 15vw;
+  height: 0;
+  position: absolute;
+  top: 80vh;
+  left: 5vw;
+}
+
+.right-text {
+  animation: infoText 1.7s ease-out 1.7s forwards;
+  overflow: hidden;
+
+  width: 15vw;
+  height: 0;
+  position: absolute;
+  top: 21vh;
+  right: 6.5vw;
+}
+
+.info p {
+  font-size: 2vh;
+  color: #fff;
 }
 
 .title-decoration div {
@@ -184,7 +223,7 @@ header {
   width: 30vh;
   height: 1vh;
   background-color: #fff;
-  animation: 1.5s ease-out 2.5s 1 titleDecoration forwards;
+  animation: 1.5s ease-out 1.5s 1 titleDecoration forwards;
 }
 
 .left-line,
@@ -212,4 +251,89 @@ div.circle {
   border-radius: 50%;
   background-color: #fff;
   display: inline-block;
+}
+
+.container {
+  max-width: 75vw;
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.temporary-title {
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  color: #fff;
+  font-family: "DMB";
+}
+
+.temporary-subtitle {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.temporary-info {
+  display: flex;
+}
+
+.temporary-description {
+  margin-right: 1em;
+  margin-bottom: 4em;
+  padding-left: 1em;
+  text-align: left;
+  color: #fff;
+  backdrop-filter: blur(0.3rem);
+  border-left: #fff solid 2px;
+}
+
+.temporary-description p {
+  margin-top: 1rem;
+}
+
+.temporary-images img {
+  margin: 1em;
+  width: 30vw;
+  border-radius: 5%;
+}
+
+.temporary-naming-warning {
+  backdrop-filter: blur(0.3rem);
+  padding: 0.3em 0em 0.1em 1em;
+  border-left: #fff solid 2px;
+  color: #fff;
+}
+
+.temporary-naming-warning p {
+  margin-bottom: 1rem;
+}
+
+.temporary-practical {
+  backdrop-filter: blur(0.3rem);
+  margin-top: 1em;
+  color: #fff;
+  background-color: rgb(70, 70, 90);
+  border-radius: 1.3em;
+}
+
+.temporary-practical #practical-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.5em;
+  border-bottom: #fff solid 0.1em;
+}
+
+.practical-info {
+  display: flex;
+  text-align: center;
+}
+
+.practical-info div {
+  /* border-top: #fff solid 0.1em; */
+  flex: 1 1 0;
+  padding: 1em;
+}
+
+.practical-info img {
+  width: 4vw;
 }
