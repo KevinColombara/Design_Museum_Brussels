@@ -59,6 +59,13 @@ body {
     url("images/exhibition-permanent.png");
 }
 
+#dmb {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url("images/architectural\ project.png");
+
+  background-position-y: -10vh;
+}
+
 header {
   background-color: #333;
   color: #fff;
@@ -336,4 +343,29 @@ div.circle {
 
 .practical-info img {
   width: 4vw;
+}
+
+.flex {
+  display: flex;
+}
+
+.dmb-text {
+  color: #fff;
+  padding-right: 2vw;
+}
+
+.dmb-text h2 {
+  font-family: "DMB";
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
+.dmb-text p {
+  margin-bottom: 10vh;
+}
+
+.dmb-image img {
+  border-radius: 4%;
+  width: 33vw;
+  margin-top: 14vh;
 }
